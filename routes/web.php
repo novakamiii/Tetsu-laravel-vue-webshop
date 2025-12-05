@@ -26,6 +26,13 @@ Route::get('/ContactUs', function() {
     return Inertia::render('ContactUs');
 });
 
+Route::get('/Register', function() {
+    return Inertia::render('auth/Register');
+});
+
+Route::get('/Login', function(){
+    return Inertia::render('auth/Login');
+});
 
 // Route::get('dashboard', function () {
 //     return Inertia::render('Dashboard');

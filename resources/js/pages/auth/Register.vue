@@ -1,108 +1,92 @@
-<script setup lang="ts">
-import InputError from '@/components/InputError.vue';
-import TextLink from '@/components/TextLink.vue';
-import { Button } from '@/components/ui/button';
-import { Input } from '@/components/ui/input';
-import { Label } from '@/components/ui/label';
-import { Spinner } from '@/components/ui/spinner';
-import AuthBase from '@/layouts/AuthLayout.vue';
-import { login } from '@/routes';
-import { store } from '@/routes/register';
-import { Form, Head } from '@inertiajs/vue3';
-</script>
+<script setup lang="ts"></script>
 
 <template>
-    <AuthBase
-        title="Create an account"
-        description="Enter your details below to create your account"
-    >
-        <Head title="Register" />
-
-        <Form
-            v-bind="store.form()"
-            :reset-on-success="['password', 'password_confirmation']"
-            v-slot="{ errors, processing }"
-            class="flex flex-col gap-6"
+    <div class="flex flex-col justify-center p-4 sm:h-screen">
+        <div
+            class="mx-auto w-full max-w-md rounded-2xl border border-gray-300 p-8"
         >
-            <div class="grid gap-6">
-                <div class="grid gap-2">
-                    <Label for="name">Name</Label>
-                    <Input
-                        id="name"
-                        type="text"
-                        required
-                        autofocus
-                        :tabindex="1"
-                        autocomplete="name"
-                        name="name"
-                        placeholder="Full name"
-                    />
-                    <InputError :message="errors.name" />
-                </div>
-
-                <div class="grid gap-2">
-                    <Label for="email">Email address</Label>
-                    <Input
-                        id="email"
-                        type="email"
-                        required
-                        :tabindex="2"
-                        autocomplete="email"
-                        name="email"
-                        placeholder="email@example.com"
-                    />
-                    <InputError :message="errors.email" />
-                </div>
-
-                <div class="grid gap-2">
-                    <Label for="password">Password</Label>
-                    <Input
-                        id="password"
-                        type="password"
-                        required
-                        :tabindex="3"
-                        autocomplete="new-password"
-                        name="password"
-                        placeholder="Password"
-                    />
-                    <InputError :message="errors.password" />
-                </div>
-
-                <div class="grid gap-2">
-                    <Label for="password_confirmation">Confirm password</Label>
-                    <Input
-                        id="password_confirmation"
-                        type="password"
-                        required
-                        :tabindex="4"
-                        autocomplete="new-password"
-                        name="password_confirmation"
-                        placeholder="Confirm password"
-                    />
-                    <InputError :message="errors.password_confirmation" />
-                </div>
-
-                <Button
-                    type="submit"
-                    class="mt-2 w-full"
-                    tabindex="5"
-                    :disabled="processing"
-                    data-test="register-user-button"
-                >
-                    <Spinner v-if="processing" />
-                    Create account
-                </Button>
+            <div class="mb-12 text-center">
+                <span class="mx-auto text-xl font-black leading-none text-gray-900 select-none">Tetsu<span
+                            class="text-indigo-600">.</span></span>
             </div>
 
-            <div class="text-center text-sm text-muted-foreground">
-                Already have an account?
-                <TextLink
-                    :href="login()"
-                    class="underline underline-offset-4"
-                    :tabindex="6"
-                    >Log in</TextLink
-                >
-            </div>
-        </Form>
-    </AuthBase>
+            <form>
+                <div class="space-y-6">
+                    <div>
+                        <label
+                            class="mb-2 block text-sm font-medium text-slate-900"
+                            >Email Id</label
+                        >
+                        <input
+                            name="email"
+                            type="text"
+                            class="w-full rounded-md border border-gray-300 bg-white px-4 py-3 text-sm text-slate-900 outline-blue-500"
+                            placeholder="Enter email"
+                        />
+                    </div>
+                    <div>
+                        <label
+                            class="mb-2 block text-sm font-medium text-slate-900"
+                            >Password</label
+                        >
+                        <input
+                            name="password"
+                            type="password"
+                            class="w-full rounded-md border border-gray-300 bg-white px-4 py-3 text-sm text-slate-900 outline-blue-500"
+                            placeholder="Enter password"
+                        />
+                    </div>
+                    <div>
+                        <label
+                            class="mb-2 block text-sm font-medium text-slate-900"
+                            >Confirm Password</label
+                        >
+                        <input
+                            name="cpassword"
+                            type="password"
+                            class="w-full rounded-md border border-gray-300 bg-white px-4 py-3 text-sm text-slate-900 outline-blue-500"
+                            placeholder="Enter confirm password"
+                        />
+                    </div>
+
+                    <div class="flex items-center">
+                        <input
+                            id="remember-me"
+                            name="remember-me"
+                            type="checkbox"
+                            class="h-4 w-4 shrink-0 rounded border-gray-300 text-blue-600 focus:ring-blue-500"
+                        />
+                        <label
+                            for="remember-me"
+                            class="ml-3 block text-sm text-slate-600"
+                        >
+                            I accept the
+                            <a
+                                href="javascript:void(0);"
+                                class="ml-1 font-medium text-blue-600 hover:underline"
+                                >Terms and Conditions</a
+                            >
+                        </label>
+                    </div>
+                </div>
+
+                <div class="mt-12">
+                    <button
+                        type="button"
+                        class="w-full cursor-pointer rounded-md bg-blue-600 px-4 py-3 text-sm font-medium tracking-wider text-white hover:bg-blue-700 focus:outline-none"
+                    >
+                        Create an account
+                    </button>
+                </div>
+                <p class="mt-6 text-center text-sm text-slate-600">
+                    Already have an account?
+                    <a
+                        href="javascript:void(0);"
+                        class="ml-1 font-medium text-blue-600 hover:underline"
+                        >Login here</a
+                    >
+                </p>
+            </form>
+        </div>
+    </div>
 </template>

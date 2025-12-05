@@ -1,110 +1,133 @@
-<script setup lang="ts">
-import InputError from '@/components/InputError.vue';
-import TextLink from '@/components/TextLink.vue';
-import { Button } from '@/components/ui/button';
-import { Checkbox } from '@/components/ui/checkbox';
-import { Input } from '@/components/ui/input';
-import { Label } from '@/components/ui/label';
-import { Spinner } from '@/components/ui/spinner';
-import AuthBase from '@/layouts/AuthLayout.vue';
-import { register } from '@/routes';
-import { store } from '@/routes/login';
-import { request } from '@/routes/password';
-import { Form, Head } from '@inertiajs/vue3';
-
-defineProps<{
-    status?: string;
-    canResetPassword: boolean;
-    canRegister: boolean;
-}>();
-</script>
+<script setup lang="ts"></script>
 
 <template>
-    <AuthBase
-        title="Log in to your account"
-        description="Enter your email and password below to log in"
-    >
-        <Head title="Log in" />
-
+    <div class="bg-gray-50">
         <div
-            v-if="status"
-            class="mb-4 text-center text-sm font-medium text-green-600"
+            class="flex min-h-screen flex-col items-center justify-center px-4 py-6"
         >
-            {{ status }}
-        </div>
-
-        <Form
-            v-bind="store.form()"
-            :reset-on-success="['password']"
-            v-slot="{ errors, processing }"
-            class="flex flex-col gap-6"
-        >
-            <div class="grid gap-6">
-                <div class="grid gap-2">
-                    <Label for="email">Email address</Label>
-                    <Input
-                        id="email"
-                        type="email"
-                        name="email"
-                        required
-                        autofocus
-                        :tabindex="1"
-                        autocomplete="email"
-                        placeholder="email@example.com"
-                    />
-                    <InputError :message="errors.email" />
+            <div class="w-full max-w-[480px]">
+                <div class="mb-12 text-center">
+                    <span
+                        class="mx-auto text-xl leading-none font-black text-gray-900 select-none"
+                        >Tetsu<span class="text-indigo-600">.</span></span
+                    >
                 </div>
 
-                <div class="grid gap-2">
-                    <div class="flex items-center justify-between">
-                        <Label for="password">Password</Label>
-                        <TextLink
-                            v-if="canResetPassword"
-                            :href="request()"
-                            class="text-sm"
-                            :tabindex="5"
-                        >
-                            Forgot password?
-                        </TextLink>
-                    </div>
-                    <Input
-                        id="password"
-                        type="password"
-                        name="password"
-                        required
-                        :tabindex="2"
-                        autocomplete="current-password"
-                        placeholder="Password"
-                    />
-                    <InputError :message="errors.password" />
-                </div>
-
-                <div class="flex items-center justify-between">
-                    <Label for="remember" class="flex items-center space-x-3">
-                        <Checkbox id="remember" name="remember" :tabindex="3" />
-                        <span>Remember me</span>
-                    </Label>
-                </div>
-
-                <Button
-                    type="submit"
-                    class="mt-4 w-full"
-                    :tabindex="4"
-                    :disabled="processing"
-                    data-test="login-button"
+                <div
+                    class="rounded-2xl border border-gray-200 bg-white p-6 shadow-sm sm:p-8"
                 >
-                    <Spinner v-if="processing" />
-                    Log in
-                </Button>
-            </div>
+                    <h1
+                        class="text-center text-3xl font-semibold text-slate-900"
+                    >
+                        Sign in
+                    </h1>
+                    <form class="mt-12 space-y-6">
+                        <div>
+                            <label
+                                class="mb-2 block text-sm font-medium text-slate-900"
+                                >User name</label
+                            >
+                            <div class="relative flex items-center">
+                                <input
+                                    name="username"
+                                    type="text"
+                                    required
+                                    class="w-full rounded-md border border-slate-300 px-4 py-3 pr-8 text-sm text-slate-900 outline-blue-600"
+                                    placeholder="Enter user name"
+                                />
+                                <svg
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    fill="#bbb"
+                                    stroke="#bbb"
+                                    class="absolute right-4 h-4 w-4"
+                                    viewBox="0 0 24 24"
+                                >
+                                    <circle
+                                        cx="10"
+                                        cy="7"
+                                        r="6"
+                                        data-original="#000000"
+                                    ></circle>
+                                    <path
+                                        d="M14 15H6a5 5 0 0 0-5 5 3 3 0 0 0 3 3h12a3 3 0 0 0 3-3 5 5 0 0 0-5-5zm8-4h-2.59l.3-.29a1 1 0 0 0-1.42-1.42l-2 2a1 1 0 0 0 0 1.42l2 2a1 1 0 0 0 1.42 0 1 1 0 0 0 0-1.42l-.3-.29H22a1 1 0 0 0 0-2z"
+                                        data-original="#000000"
+                                    ></path>
+                                </svg>
+                            </div>
+                        </div>
+                        <div>
+                            <label
+                                class="mb-2 block text-sm font-medium text-slate-900"
+                                >Password</label
+                            >
+                            <div class="relative flex items-center">
+                                <input
+                                    name="password"
+                                    type="password"
+                                    required
+                                    class="w-full rounded-md border border-slate-300 px-4 py-3 pr-8 text-sm text-slate-900 outline-blue-600"
+                                    placeholder="Enter password"
+                                />
+                                <svg
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    fill="#bbb"
+                                    stroke="#bbb"
+                                    class="absolute right-4 h-4 w-4 cursor-pointer"
+                                    viewBox="0 0 128 128"
+                                >
+                                    <path
+                                        d="M64 104C22.127 104 1.367 67.496.504 65.943a4 4 0 0 1 0-3.887C1.367 60.504 22.127 24 64 24s62.633 36.504 63.496 38.057a4 4 0 0 1 0 3.887C126.633 67.496 105.873 104 64 104zM8.707 63.994C13.465 71.205 32.146 96 64 96c31.955 0 50.553-24.775 55.293-31.994C114.535 56.795 95.854 32 64 32 32.045 32 13.447 56.775 8.707 63.994zM64 88c-13.234 0-24-10.766-24-24s10.766-24 24-24 24 10.766 24 24-10.766 24-24 24zm0-40c-8.822 0-16 7.178-16 16s7.178 16 16 16 16-7.178 16-16-7.178-16-16-16z"
+                                        data-original="#000000"
+                                    ></path>
+                                </svg>
+                            </div>
+                        </div>
+                        <div
+                            class="flex flex-wrap items-center justify-between gap-4"
+                        >
+                            <div class="flex items-center">
+                                <input
+                                    id="remember-me"
+                                    name="remember-me"
+                                    type="checkbox"
+                                    class="h-4 w-4 shrink-0 rounded border-slate-300 text-blue-600 focus:ring-blue-500"
+                                />
+                                <label
+                                    for="remember-me"
+                                    class="ml-3 block text-sm text-slate-900"
+                                >
+                                    Remember me
+                                </label>
+                            </div>
+                            <div class="text-sm">
+                                <a
+                                    href="jajvascript:void(0);"
+                                    class="font-semibold text-blue-600 hover:underline"
+                                >
+                                    Forgot your password?
+                                </a>
+                            </div>
+                        </div>
 
-            <div
-                class="text-center text-sm text-muted-foreground"
-                v-if="canRegister"
-            >
-                Don't have an account?
-                <TextLink :href="register()" :tabindex="5">Sign up</TextLink>
+                        <div class="!mt-12">
+                            <button
+                                type="button"
+                                class="w-full cursor-pointer rounded-md bg-blue-600 px-4 py-2 text-[15px] font-medium tracking-wide text-white hover:bg-blue-700 focus:outline-none"
+                            >
+                                Sign in
+                            </button>
+                        </div>
+                        <p class="!mt-6 text-center text-sm text-slate-900">
+                            Don't have an account?
+                            <a
+                                href="javascript:void(0);"
+                                class="ml-1 font-semibold whitespace-nowrap text-blue-600 hover:underline"
+                                >Register here</a
+                            >
+                        </p>
+                    </form>
+                </div>
             </div>
-        </Form>
-    </AuthBase>
+        </div>
+    </div>
 </template>
