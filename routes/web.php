@@ -14,8 +14,21 @@ Route::get('/', function() {
     return Inertia::render('Commerce');
 });
 
-Route::get('dashboard', function () {
-    return Inertia::render('Dashboard');
-})->middleware(['auth', 'verified'])->name('dashboard');
+Route::get('/Products', function() {
+    return Inertia::render('Products');
+});
+
+Route::get('/AboutUs', function() {
+    return Inertia::render('AboutUs');
+});
+
+Route::get('/ContactUs', function() {
+    return Inertia::render('ContactUs');
+});
+
+
+// Route::get('dashboard', function () {
+//     return Inertia::render('Dashboard');
+// })->middleware(['auth', 'verified'])->name('dashboard');
 
 require __DIR__.'/settings.php';
