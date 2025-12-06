@@ -49,10 +49,12 @@ import Navbar from '@/components/ui/Navbar.vue';
                     About Us
                 </h2>
                 <p class="mb-6 text-lg text-gray-600">
-                    We craft innovative digital experiences that elevate your
-                    brand and inspire your audience. Our passionate team
-                    leverages creativity and cutting-edge technology to bring
-                    your vision to life with precision and style.
+                    We’re a tiny forge with a big Wi-Fi pipe: two sweaty smiths,
+                    one grumpy dog, and a 200-year-old anvil that now gets more
+                    Shopify pings than hammer hits. Every piece is born in coal
+                    and sparks, photographed before the soot dries, and boxed
+                    before the metal cools—so you get heirloom-grade steel
+                    without leaving your couch.
                 </p>
                 <div class="space-y-6">
                     <!-- Card for each feature -->
@@ -76,11 +78,10 @@ import Navbar from '@/components/ui/Navbar.vue';
                         </div>
                         <div>
                             <h3 class="text-xl font-semibold text-gray-700">
-                                Dedicated Team
+                                Hand-forged, no faux
                             </h3>
                             <p class="text-sm text-gray-500">
-                                A passionate group of experts committed to
-                                delivering excellence in every project.
+                                If a robot touched it, we recycle it..
                             </p>
                         </div>
                     </div>
@@ -104,11 +105,11 @@ import Navbar from '@/components/ui/Navbar.vue';
                         </div>
                         <div>
                             <h3 class="text-xl font-semibold text-gray-700">
-                                Innovative Approach
+                                Ship fast, quench faster
                             </h3>
                             <p class="text-sm text-gray-500">
-                                We embrace creativity and technology to craft
-                                unique solutions tailored for you.
+                                Order today, blade oil-quenched and out the door
+                                in 48 h.
                             </p>
                         </div>
                     </div>
@@ -132,11 +133,11 @@ import Navbar from '@/components/ui/Navbar.vue';
                         </div>
                         <div>
                             <h3 class="text-xl font-semibold text-gray-700">
-                                Customer Centric
+                                Hammer-down guarantee
                             </h3>
                             <p class="text-sm text-gray-500">
-                                Your satisfaction is our priority — we listen,
-                                adapt, and deliver beyond expectations.
+                                Break it doing something reasonable? We re-forge
+                                or replace it, no medieval quest requirens.
                             </p>
                         </div>
                     </div>
@@ -149,7 +150,7 @@ import Navbar from '@/components/ui/Navbar.vue';
                     class="absolute inset-0 transform rounded-xl bg-gradient-to-br from-purple-400 via-blue-400 to-green-400 shadow-lg transition-transform duration-300 hover:scale-105"
                 ></div>
                 <img
-                    src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+                    src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fvisitkyotango.com%2Fwp-content%2Fuploads%2F2022%2F09%2FDSC1038.jpg&f=1&nofb=1&ipt=fdf44d67d85861195a8ff8e9ef14706ed72017e3adc831578ef6d6843be2193f"
                     alt="About Us"
                     class="relative h-full w-full rounded-xl object-cover shadow-xl transition-opacity duration-300 hover:opacity-90"
                 />

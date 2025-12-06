@@ -34,6 +34,12 @@ Route::get('/Login', function(){
     return Inertia::render('auth/Login');
 });
 
+Route::get('/Product/{id}', function() {
+    $id = $_GET['id'];
+
+    return Inertia::render('ProductPage');
+});
+
 // Route::get('dashboard', function () {
 //     return Inertia::render('Dashboard');
 // })->middleware(['auth', 'verified'])->name('dashboard');
