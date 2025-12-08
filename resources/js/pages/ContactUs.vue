@@ -61,7 +61,7 @@ import Navbar from '@/components/ui/Navbar.vue';
                                         Phone
                                     </h4>
                                     <p class="text-lg text-gray-600">
-                                        +1 (555) 123-4567
+                                        +530000000000
                                     </p>
                                 </div>
                             </div>
@@ -90,7 +90,7 @@ import Navbar from '@/components/ui/Navbar.vue';
                                         Email
                                     </h4>
                                     <p class="text-lg text-gray-600">
-                                        hello@company.com
+                                        tetsu@murashiki.com
                                     </p>
                                 </div>
                             </div>
@@ -125,8 +125,7 @@ import Navbar from '@/components/ui/Navbar.vue';
                                         Office
                                     </h4>
                                     <p class="text-lg text-gray-600">
-                                        123 Business Ave, Suite 100<br />New
-                                        York, NY 10001
+                                        123 Shibuya, Suite 100<br />Japan, JP 10001
                                     </p>
                                 </div>
                             </div>

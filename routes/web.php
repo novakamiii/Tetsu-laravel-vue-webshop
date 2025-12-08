@@ -34,11 +34,12 @@ Route::get('/Login', function(){
     return Inertia::render('auth/Login');
 });
 
-Route::get('/Product/{id}', function() {
-    $id = $_GET['id'];
-
-    return Inertia::render('ProductPage');
+Route::get('/product/{id}', function ($id) {
+    return Inertia::render('ProductPage', [
+        'id' => $id
+    ]);
 });
+
 
 // Route::get('dashboard', function () {
 //     return Inertia::render('Dashboard');

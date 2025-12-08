@@ -10,5 +10,4 @@ import HeroSection from '@/components/ui/HeroSection.vue';
 
     <Navbar/>
     <HeroSection/>
-    <ProductCard/>
 </template>
