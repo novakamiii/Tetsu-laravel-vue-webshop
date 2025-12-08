@@ -27,6 +27,15 @@ Submitted by: <b>Paulo Neil A. Sevilla BSIT 3-1</b>
 
 ![Product-Page](https://github.com/novakamiii/Tetsu-laravel-vue-webshop/blob/master/screenshots/TESTU-PROD-PAGE.png?raw=true "Product Page")
 
+
+> About Us
+
+![About-Page](https://github.com/novakamiii/Tetsu-laravel-vue-webshop/blob/master/screenshots/TETSU-ABOUT.png?raw=true "About Page")
+
+> Contact Us
+
+![Contact-Page](https://github.com/novakamiii/Tetsu-laravel-vue-webshop/blob/master/screenshots/TETSU-CONTACT.png?raw=true "Contact Page")
+
 <hr>
 
 ## Instructions
