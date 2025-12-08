@@ -13,6 +13,22 @@ Submitted by: <b>Paulo Neil A. Sevilla BSIT 3-1</b>
 
 <hr>
 
+# Preview
+
+> Home Page
+
+![Home-Page](https://github.com/novakamiii/Tetsu-laravel-vue-webshop/blob/master/screenshots/TESTU-HOME.png?raw=true "Home Page")
+
+> Product List
+
+![Product-List](https://github.com/novakamiii/Tetsu-laravel-vue-webshop/blob/master/screenshots/TESTU-PROD-LIST.png?raw=true "Product List Page")
+
+> Product Page
+
+![Product-Page](https://github.com/novakamiii/Tetsu-laravel-vue-webshop/blob/master/screenshots/TESTU-PROD-PAGE.png?raw=true "Product Page")
+
+<hr>
+
 ## Instructions
 
 **(Skip to Step 2 if Laravel is installed.)**
