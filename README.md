@@ -61,7 +61,11 @@ cd {cloned-repository-name}
 
 4. Run this command.
 ```
-composer run dev
+npm i
+```
+then
+```
+composer run then
 ```
 
 5. A log will show on where's the website link, it would show up like this:
