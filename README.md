@@ -66,7 +66,7 @@ npm run build
 ```
 then
 ```
-composer run then
+composer run dev
 ```
 
 5. A log will show on where's the website link, it would show up like this:
