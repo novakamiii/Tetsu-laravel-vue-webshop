@@ -62,6 +62,7 @@ cd {cloned-repository-name}
 4. Run this command.
 ```
 npm i
+npm run build
 ```
 then
 ```
